@@ -1,40 +1,54 @@
 import React from 'react';
-import '../index.css';
+import '../css/Calculator.css';
 
-export default function Calculator() {
-  return (
-    <div className="calc">
-      <div className="calc-style">
-        <div className="row">
-          <button className="btn" type="button">AC</button>
-          <button className="btn" type="button">+/-</button>
-          <button className="btn" type="button">%</button>
-          <button className="btn operator" type="button">-</button>
-        </div>
-        <div className="row">
-          <button className="btn" type="button">7</button>
-          <button className="btn" type="button">8</button>
-          <button className="btn" type="button">9</button>
-          <button className="btn operator" type="button">/</button>
-        </div>
-        <div className="row">
-          <button className="btn" type="button">4</button>
-          <button className="btn" type="button">5</button>
-          <button className="btn" type="button">6</button>
-          <button className="btn operator" type="button">x</button>
-        </div>
-        <div className="row">
-          <button className="btn" type="button">1</button>
-          <button className="btn" type="button">2</button>
-          <button className="btn" type="button">3</button>
-          <button className="btn operator" type="button">+</button>
-        </div>
-        <div className="row">
-          <button className="btn" type="button">.</button>
-          <button className="btn" type="button">0</button>
-          <button className="btn operator" type="button">=</button>
+import Buttons from './Buttons';
+import Calculate from '../logic/calculate';
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttons: [
+        'AC', '+/-', '%', '\u00F7', '7', '8', '9', 'x',
+        '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=',
+      ],
+      calculateObj: { total: 0, next: null, operation: null },
+      result: 0,
+    };
+
+    this.getResult = this.getResult.bind(this);
+  }
+
+  getResult(value) {
+    const { calculateObj } = this.state;
+    const calculation = Calculate(calculateObj, value);
+    this.setState({
+      calculateObj: calculation,
+    }, this.getScreenValue);
+  }
+
+  getScreenValue() {
+    const { calculateObj } = this.state;
+    let result = calculateObj.total || 0;
+    if (calculateObj.operation) result = `${calculateObj.total || ''} ${calculateObj.operation || ''}`;
+    if (calculateObj.next) result = `${calculateObj.total || ''} ${calculateObj.operation || ''} ${calculateObj.next}`;
+    this.setState({ result });
+  }
+
+  render() {
+    const { buttons, result } = this.state;
+    return (
+      <div className="Calculator">
+        <div className="Screen-div">{ result }</div>
+        <div className="Buttons-grid">
+          {buttons.map((button) => (
+            <Buttons key={button} value={button} handleClick={this.getResult} />
+          ))}
+
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default Calculator;
