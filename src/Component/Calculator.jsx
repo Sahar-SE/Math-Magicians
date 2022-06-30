@@ -6,9 +6,10 @@ export default function Calculator() {
     <div className="calc">
       <div className="calc-style">
         <div className="row">
-          <button className="btn operator" type="button">AC</button>
-          <button className="btn operator" type="button">+/-</button>
-          <button className="btn operator" type="button">%</button>
+          <button className="btn" type="button">AC</button>
+          <button className="btn" type="button">+/-</button>
+          <button className="btn" type="button">%</button>
+          <button className="btn operator" type="button">-</button>
         </div>
         <div className="row">
           <button className="btn" type="button">7</button>
@@ -29,9 +30,8 @@ export default function Calculator() {
           <button className="btn operator" type="button">+</button>
         </div>
         <div className="row">
-          <button className="btn operator" type="button">.</button>
+          <button className="btn" type="button">.</button>
           <button className="btn" type="button">0</button>
-          <button className="btn operator" type="button">-</button>
           <button className="btn operator" type="button">=</button>
         </div>
       </div>
