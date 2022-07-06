@@ -34,7 +34,6 @@ const Calculator = () => {
               handleClick={getResult}
             />
           ))}
-
         </div>
       </div>
     </div>
