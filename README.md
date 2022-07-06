@@ -1,17 +1,31 @@
-# Calculator
-This App is a Calculator app Which is created by React.
+# # Math Magician
+This App is a Calculator app Which is created by React, by using React route , class based components, functional based components and Hooks.
 
-Build With 👩‍🔧
-.React
+## Build With 👩‍🔧
+- React
+- CSS
+- Sublime
+- JSX
+- React Hooks
 
-.CSS
+## Getting Started 🎬
 
-.Sublime
+To get a local copy up and running follow these simple example steps.
 
-Getting Started 🎬
-In this project I create a calculator with class based components. It has mobile and desktop virsion, button interaction.
+## Prerequisites
+- HTML
+- CSS
+- JS
+- ES6
+## Setup
+- install React.js by this command: npx create-react-app <app name> 
+- find React route by: npm install react-router-dom
+## Usage
+  npm start
+## Run tests
+  npm test
 
-Author
+## Author
 Sahar Saba Amiri
 
 . Gmail: saharsaba.amiri123@gmail.com
@@ -20,16 +34,13 @@ Sahar Saba Amiri
 
 . GitHub : https://github.com/Sahar-SE
 
-Live Demo
-https://sahar-se.github.io/Leaderboard/docs/
-
-Contributing
+## Contributing
 Contributions, issues, and feature requests are welcome!
 
-Acknowledgments
+## Acknowledgments
 .Hat tip to anyone who review my code and use it. .Inspiration .etc
 
-📝 License
+## 📝 License
 This project is MIT licensed.
 
-Show your Support By giving me a Star✨
+- Show your Support By giving me a Star✨

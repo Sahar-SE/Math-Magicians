@@ -21,18 +21,20 @@ const Calculator = () => {
   };
 
   return (
-    <div className="Calculator">
-      <CalculatorScreen calculateObj={calculatorValue} />
-      <div className="Buttons-grid">
-        {buttons.map((button) => (
-          <Buttons
-            key={button}
-            value={button}
-            orangeButtons={orangeButtons}
-            handleClick={getResult}
-          />
-        ))}
-
+    <div>
+      <h2>Let&apos;s do some math!</h2>
+      <div className="Calculator">
+        <CalculatorScreen calculateObj={calculatorValue} />
+        <div className="Buttons-grid">
+          {buttons.map((button) => (
+            <Buttons
+              key={button}
+              value={button}
+              orangeButtons={orangeButtons}
+              handleClick={getResult}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
