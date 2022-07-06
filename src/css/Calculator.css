@@ -3,12 +3,16 @@
   flex-direction: column;
   justify-content: center;
   border: 1px solid #747474;
-  width: 499px;
-  margin: 30px;
+  width: 60%;
+  height: 42%;
+  position: absolute;
+  bottom: 85px;
+  right: 30px;
 }
 
 .Screen-div {
   padding: 15px;
+  height: 45px;
   align-self: stretch;
   background: #8b8888;
   text-align: end;
@@ -23,14 +27,25 @@
 
 .Button {
   padding: 15px;
+  height: 40px;
   font-size: 12px;
   border: 1px solid #e5c7b2;
 }
 
 .Orange-button {
   background-color: #f98538;
+  height: 40px;
+
 }
 
 .Zero {
   grid-column: 1/span 2;
+  height: 40px;
+}
+
+h2 {
+  position: absolute;
+  left: 40px;
+  top: 130px;
+  color: grey;
 }
