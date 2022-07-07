@@ -24,6 +24,8 @@ To get a local copy up and running follow these simple example steps.
   npm start
 ## Run tests
   npm test
+## Live Demo
+https://full-app-heroku.herokuapp.com/
 
 ## Author
 Sahar Saba Amiri
